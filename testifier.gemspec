@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = "Creates test and class files"
   s.authors     = ["Jeff Roush"]
   s.email       = "jeff@jeffroush.com"
-  s.homepage    = "https://github.com/jeff-r/testify"
+  s.homepage    = "https://github.com/jeff-r/testifier"
   s.license     = "MIT"
 
   s.files         = `git ls-files`.split("\n")
