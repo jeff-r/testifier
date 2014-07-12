@@ -38,7 +38,7 @@ creates
  
  There is a shorter version of the command:
 
-   ty some_new_filename
+    ty some_new_filename
 
 ## To install:
 
