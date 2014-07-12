@@ -1,4 +1,4 @@
-# Testify creates class and test files.
+# Testify creates class and test files
 
 The idea is to lower the barrier just a bit to doing TDD when writing small scripts.
 
