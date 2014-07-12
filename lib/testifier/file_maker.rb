@@ -56,7 +56,7 @@ CLASS
 
     def test_definition
       <<-TEST
-require "#{target_dir}#{basename}"
+require "#{dirname}#{basename}"
 
 describe #{class_name} do
 end
