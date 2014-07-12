@@ -8,7 +8,7 @@ module Testifier
     let(:mock_test_file) { double("file") }
 
     before do
-      allow(Dir).to receive(:mkdir)
+      allow(FileUtils).to receive(:mkdir_p)
       allow(File).to receive(:exist?)
       allow(File).to receive(:open).with(maker.class_file, anything).and_yield(mock_class_file)
       allow(File).to receive(:open).with(maker.test_file, anything).and_yield(mock_test_file)
@@ -44,7 +44,7 @@ module Testifier
     describe "#create_files" do
       it "creates the target dir if needed" do
         allow(File).to receive(:exist?).with(maker.target_dir).and_return(false)
-        expect(Dir).to receive(:mkdir).with(maker.target_dir)
+        expect(FileUtils).to receive(:mkdir_p).with(maker.target_dir)
         maker.create_files
       end
 
@@ -56,7 +56,7 @@ module Testifier
 
       it "creates the test dir if needed" do
         allow(File).to receive(:exist?).with(maker.test_dir).and_return(false)
-        expect(Dir).to receive(:mkdir).with(maker.test_dir)
+        expect(FileUtils).to receive(:mkdir_p).with(maker.test_dir)
         maker.create_files
       end
     end

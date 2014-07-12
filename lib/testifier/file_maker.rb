@@ -1,4 +1,5 @@
 require "active_support/all"
+require "fileutils"
 
 module Testifier
   class FileMaker
@@ -71,7 +72,7 @@ TEST
 
     def make_dir_if_necessary(filename)
       unless File.exist?(filename)
-        Dir.mkdir(filename)
+        FileUtils.mkdir_p(filename)
       end
     end
 
