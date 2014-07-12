@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+require "testifier"
+require "optparse"
+
+module Testifier
+  class TestifyRunner
+    def parse
+      @options = {}
+      OptionParser.new do |opts|
+        opts.on("-v", "--version", "Show version") do |v|
+          @options[:version] = true
+        end
+      end.parse!
+    end
+
+    def print_version
+      puts Testifier::VERSION
+    end
+
+    def print_banner
+      puts "Usage: testify [options] file"
+    end
+
+    def make_files(filename)
+      FileMaker.new(filename).create_files
+    end
+
+    def run
+      if @options[:version]
+        print_version
+      elsif ARGV.empty?
+        print_banner
+      else
+        make_files(ARGV[0])
+      end
+    end
+  end
+end
+
+runner = Testifier::TestifyRunner.new
+runner.parse
+runner.run
