@@ -2,7 +2,7 @@
 
 The idea is to lower the barrier just a bit to doing TDD when writing small scripts.
 
-I'd be surprised if there weren't good alternatives out there already. But no, "use an IDE" isn't one of them. If god had meant us to use an IDE, he wouldn't have given us vim.
+I'd be surprised if there weren't good alternatives out there already. But no, "use an IDE" isn't one of them. If Zeus had meant us to use an IDE, he wouldn't have given us vim.
 
 ## To use:
 
